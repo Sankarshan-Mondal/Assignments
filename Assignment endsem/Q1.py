@@ -11,14 +11,15 @@ a=0.1
 b=1
 
 i = 0 #for counting the number of iterations
-while f(b) > 0.001:
+while f(b) > 0.00001: #we are choosing accuracy to be 0.00001
     b = b - (f(b)*(b-a))/(f(b)-f(a))
 
     
     i += 1 #counting the number of iterations
+    #print(b) gives us the iterative value at each step
 
-print(b) #the root
-print(i) #number of iterations
+print('The root of the function:', b) #the root
+print('The number of iterations:', i) #number of iterations
 
 
 
