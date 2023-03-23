@@ -8,8 +8,10 @@ s=[]
 
 #the working code
 if r>0:
-    for i in range(1,r):
-        for j in range(1,r):
+    #We use the simple property that (a+b)^3 > a^3 + b^3.
+    #Therefore, we will always have r > (a^3+b^3)^(1/3).
+    for i in range(1, int(r**(1/3))+1): 
+        for j in range(1, int(r**(1/3))+1):
             if i<j:
                 if r == i**3 + j**3:
                     z = (i,j)
