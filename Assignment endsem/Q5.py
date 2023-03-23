@@ -9,7 +9,7 @@ s=[]
 #the working code
 if r>0:
     for i in range(1,r):
-        for j in range(r):
+        for j in range(1,r):
             if i<j:
                 if r == i**3 + j**3:
                     z = (i,j)
