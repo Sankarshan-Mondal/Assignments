@@ -14,8 +14,10 @@ for i in range(n):#choosing the number of pairs
     if len(l)==2:   #taking paired values as valid inputs
         k = [int(i) for i in l]
         graph.append(k) #appending the original list
-print('The list named "graph":', graph)
+print('The list named "graph":', graph)#output 1
 
+
+#Adjacency list
 #creating set because we can get the keys of the dictionary from that
 set1 = []
 for i in graph:
@@ -35,4 +37,4 @@ for k in set1:  #iterating the keys
             a.append(i[1-i.index(k)]) #we are taking just the element of the list which is the output variable
     adjlst[k]=a     #adding key-value pairs to the dictionary
 
-print('The dictionary of lists:', adjlst)
+print('The dictionary of lists:', adjlst)#output 2
