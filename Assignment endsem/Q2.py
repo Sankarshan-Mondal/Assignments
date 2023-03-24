@@ -20,8 +20,8 @@ print('A.B=', s) #obtaining the final dot product
 ab = 0 #initializing the dot product
 a2 = 0 #initializing the variance of a
 b2 = 0 #initializing the variance of b
-if np.size(A)==np.size(B): #checking the possibility of dot product
-    for i in range(np.size(A)): #iterating the values
+if len(A)==len(B): #checking the possibility of dot product
+    for i in range(len(A)): #iterating the values
         ab += A[i]*B[i] #adding each iteration to the initial value
         a2 += A[i]**2
         b2 += B[i]**2
