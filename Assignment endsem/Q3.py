@@ -7,30 +7,21 @@ graph = []#forming the empty list
 for i in range(n):#choosing the number of pairs
     while True:     #restricting the number of inputs in the smaller list to two
         l = input('Enter edges:').split(' ') #taking edges as input
-        if len(l)!=2:
+        if len(l)!=2: #fixing inputs to two numbers
             print('Enter two numbers')
         elif l[0]==l[1]: #not allowing duplicates
             print('Enter some different edgepoints')
         else: 
             k = [int(i) for i in l]
-            if k in graph:
+            if k in graph: #not allowing identical inputs
                 print('Already taken')
-            elif k[::-1] in graph:
+            elif k[::-1] in graph: #not allowing reverse inputs of the same
                 print('Already taken')
             else:
                 graph.append(k) #appending the original list
                 break
-            
-    # if len(l)==2:   #taking paired values as valid inputs
-    #     while True:
-    #         if l[0]!=l[1]:
-    #             print('Enter some different edgepoints')
-    #         else:
-    #             break
-        
-            
-print('The list named "graph":', graph)#output 1
 
+print('The list named "graph":', graph)#output 1
 
 #Adjacency list
 #creating set because we can get the keys of the dictionary from that
