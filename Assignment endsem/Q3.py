@@ -9,11 +9,26 @@ for i in range(n):#choosing the number of pairs
         l = input('Enter edges:').split(' ') #taking edges as input
         if len(l)!=2:
             print('Enter two numbers')
-        else:
-            break
-    if len(l)==2:   #taking paired values as valid inputs
-        k = [int(i) for i in l]
-        graph.append(k) #appending the original list
+        elif l[0]==l[1]: #not allowing duplicates
+            print('Enter some different edgepoints')
+        else: 
+            k = [int(i) for i in l]
+            if k in graph:
+                print('Already taken')
+            elif k[::-1] in graph:
+                print('Already taken')
+            else:
+                graph.append(k) #appending the original list
+                break
+            
+    # if len(l)==2:   #taking paired values as valid inputs
+    #     while True:
+    #         if l[0]!=l[1]:
+    #             print('Enter some different edgepoints')
+    #         else:
+    #             break
+        
+            
 print('The list named "graph":', graph)#output 1
 
 
