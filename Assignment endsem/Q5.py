@@ -20,7 +20,7 @@ else:
     print('Enter a positive number')   
 
 #the code for generating the output
-if len(s)>0: #determining the Ramanujan number by size of list s
+if len(s)==2: #determining the Ramanujan number by size of list s
     print(r, 'is a Ramanujan number') 
     print('The numbers whose cubes add up are:', s)
 else:
